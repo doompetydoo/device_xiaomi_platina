@@ -73,6 +73,9 @@ on boot
     chmod 0770 /sys/class/power_supply/battery/device/thermalcall
     chown system system /sys/class/power_supply/battery/device/thermalcall
 
+    # Use SDM636 powerhint config
+    setprop vendor.powerhal.config "powerhint_660.json"
+
     # Enable camera read sensors data
     setprop persist.camera.gyro.disable 0
 
